@@ -1,0 +1,11 @@
+[user]
+	email = alephalpha0@rootofpi.me
+	name = alephalpha0
+[pull]
+	rebase = true
+[hub]
+	protocol = ssh
+[core]
+	editor = micro
+[color]
+	ui = true

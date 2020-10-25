@@ -1,0 +1,64 @@
+##########################################
+## Liquid Prompt config por alephalpha0  ###
+## This is my config. There are many like it,
+## but this one is mine.
+## 2020-10-20
+
+### GEN BEHAVIOR
+
+# battery % is displayed if under this threshhold
+ LP_BATTERY_THRESHOLD=60
+# CPU load avg over past minute.
+ LP_LOAD_THRESHOLD=100
+# CPU temp displayed if over this threshold in celsius
+ LP_TEMP_THRESHOLD=60
+# shorten path? NO!
+ LP_ENABLE_SHORTEN_PATH=0
+# maximum % of screen path should take up
+ LP_PATH_LENGTH=90
+# # of dirs to keep when shortening
+ LP_PATH_KEEP=4
+# show  hostname always? 0 is no when not connected remote
+# 1 is always -1 is never
+ LP_HOSTNAME_ALWAYS=0
+# use FQN instead of short host?
+ LP_ENABLE_FQN=0
+# show the current user name?
+ LP_USER_ALWAYS=0
+# show % with cpu load and battery imgs?
+ LP_PERCENTS_ALWAYS=0
+
+### ENABLE / DISABLE PROMPT SUBSECTIONS
+
+#show red : when you dont have +w
+ LP_ENABLE_PERM=1
+ LP_ENABLE_PROXY=1
+ LP_ENABLE_JOBS=1
+ LP_ENABLE_LOAD=0
+ LP_ENABLE_BATT=0
+ LP_ENABLE_SUDO=0
+ LP_ENABLE_VCS_ROOT=1
+ LP_ENABLE_GIT=1
+ LP_ENABLE_SVN=0
+ LP_ENABLE_HG=0
+ LP_ENABLE_FOSSIL=0
+ LP_ENABLE_BZR=0
+ LP_ENABLE_TIME=1
+ LP_ENABLE_RUNTIME=1
+ LP_RUNTIME_THRESHOLD=5
+ LP_ENABLE_RUNTIME_BELL=1
+ LP_RUNTIME_BELL_THRESHOLD=15
+ LP_ENABLE_VIRTUALENV=1
+ LP_ENABLE_SCLS=1
+ LP_ENABLE_TEMP=0
+ LP_TIME_ANALOG=0
+ LP_ENABLE_TITLE=1
+ LP_ENABLE_SCREEN_TITLE=0
+ LP_ENABLE_SSH_COLORS=1
+ 
+### ADD IN PROMPT PRE/POST -FIXES
+LP_PS1_PREFIX="🚀"
+LP_PS1_POSTFIX="|>"
+LP_MARK_PREFIX="
+"
+LP_PS1_FILE=~/.config/zsh/liquidprompt.aa0.ps1

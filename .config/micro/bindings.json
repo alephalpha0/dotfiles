@@ -1,0 +1,5 @@
+{
+	"F5": "command:hsplit,command:term",
+    "Alt-/": "lua:comment.comment",
+    "CtrlUnderscore": "lua:comment.comment"
+}

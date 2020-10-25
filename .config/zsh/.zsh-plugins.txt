@@ -1,0 +1,17 @@
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+
+brokendisk/dune-quotes
+svenXY/timewarrior
+
+nojhan/liquidprompt
+
+ohmyzsh/ohmyzsh path:lib
+#ohmyzsh/ohmyzsh path:themes/ys.zsh-theme
+ohmyzsh/ohmyzsh path:plugins/catimg
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/pip
+ohmyzsh/ohmyzsh path:plugins/python
+
+zsh-users/zsh-syntax-highlighting kind:fpath
+zsh-users/zsh-history-substring-search
