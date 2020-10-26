@@ -2,5 +2,6 @@
 
 
 ### sources i've ravished like a fair damsel: 
-[caarlos0](https://github.com/caarlos0/dotfiles)
-[blog post: managing your dotfiles](https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/)
+[caarlos0](https://github.com/caarlos0/dotfiles) - dotfiles for zstyle completion wrangling. 
+[blog post: managing your dotfiles](https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/) - ways of organizing and managing my dotfiles. ~~symlinks!~~ 
+[blog post: command line productivity](https://blog.lftechnology.com/command-line-productivity-with-zsh-aliases-28b7cebfdff9) - turned me onto alias suffixes. sexy, sexy alias suffixes. 

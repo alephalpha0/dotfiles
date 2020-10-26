@@ -124,7 +124,14 @@ alias sshadd="ssh-add ~/.ssh/id_ecdsa_rootofpime"
 alias myrc="$EDITOR $ZDOTDIR/.zshrc"
 alias myenv="$EDITOR ~/.zshenv"
 alias motd="$EDITOR $PREFIX/etc/motd"
+## default editors to use for MD|TXT|YML|YAML files
+alias -s txt=micro
+alias -s (md|mdown|markdown)=micro
+# mainly for use in a terminal frame in micro,
 alias batdir="l. | bat"
+## image mogrifyance
+alias ascii="jp2a --fit-zoom --background=light --colors "
+alias ascii="jp2a --fit-zoom --background=light --colors --html --output=~/rootofpi.me/assests/pictures"
 ##################################################
 ### Duc QOL fun times.
 alias duci="duc index -pbv " 
