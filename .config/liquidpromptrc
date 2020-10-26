@@ -3,6 +3,7 @@
 ## This is my config. There are many like it,
 ## but this one is mine.
 ## 2020-10-20
+LP_PS1_FILE=~/.config/zsh/liquidprompt.aa0.ps1
 
 ### GEN BEHAVIOR
 
@@ -61,4 +62,3 @@ LP_PS1_PREFIX="🚀"
 LP_PS1_POSTFIX="|>"
 LP_MARK_PREFIX="
 "
-LP_PS1_FILE=~/.config/zsh/liquidprompt.aa0.ps1
