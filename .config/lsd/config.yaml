@@ -1,0 +1,32 @@
+#why would we be using anything other than ls, if we just wanted ls?
+classic: false
+
+blocks:
+  - permission
+  - name
+  - size
+  - date
+
+color:
+  when: always
+
+date: date
+
+dereference: false
+
+display: almost-all
+
+icons:
+  when: always
+  theme: fancy
+
+indicators: true
+
+layout: oneline
+
+sorting:
+  column: name
+  reverse: false
+  dir-grouping: first
+
+total-size: true
