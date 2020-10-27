@@ -44,6 +44,7 @@ export GITHUB_USER="alephalpha0"
 export EDITOR="micro"
 export VISUAL="micro"
 export PAGER="less"
+export BROWSER="w3m"
 ### ZSH can remember? LET IT BE!
 export HISTFILE="$ZDOTDIR/.zhistory"
 export HISTTIMEFORMAT="[%F %T]"
