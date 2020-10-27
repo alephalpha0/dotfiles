@@ -1,6 +1,6 @@
 ##################################################
 ## alephalpha0 | ZSH RC File. Magic Happening.  ##
-## created:2020-08-04   |   modified:2020-10-22 ##
+## created:2020-08-04   |   modified:2020-10-26 ##
 ##----------------------------------------------##
 ##   TERMUX 0.99 RUNNING ON ANDROID 10@A205U    ##
 ##        https://github.com/alephalpha0        ##
@@ -103,71 +103,4 @@ eval "$(register-python-argcomplete pipx)"
 ##################################################
 ## ZSH ALIASES. BC WHY REMEMBER EVERY OPTION?   ##
 ##################################################
-### LS DAILY DRIVER -- GIT BUILT IN!
-# https://the.exa.website/ 
-alias l.="exa -alh --git --classify -s=name --group-directories-first"
-alias lt="exa -a --tree --level=4 --long --git"
-##################################################
-### BETTER, LITTLE MORE SANE UTILS
-alias cat="bat "
-alias ls="exa"
-alias cpy="rsync -avz --checksum --progress -h"
-alias mov="rsync -avz --checksum --progress -h --remove-source-files"
-alias sync="rsync -avzu --checksum --progress -h"
-alias rmv="rm -fd -R -I"
-##################################################
-### SSH QOL quick go and add!
-alias ssheval="eval $(ssh-agent -s)"
-alias sshadd="ssh-add ~/.ssh/id_ecdsa_rootofpime"
-##################################################
-### FREQ EDITED FILES / MANIP OF FILES
-alias myrc="$EDITOR $ZDOTDIR/.zshrc"
-alias myenv="$EDITOR ~/.zshenv"
-alias motd="$EDITOR $PREFIX/etc/motd"
-## default editors to use for MD|TXT|YML|YAML files
-alias -s txt=micro
-alias -s (md|mdown|markdown)=micro
-# mainly for use in a terminal frame in micro,
-alias batdir="l. | bat"
-## image mogrifyance
-alias ascii="jp2a --fit-zoom --background=light --colors "
-alias ascii="jp2a --fit-zoom --background=light --colors --html --output=~/rootofpi.me/assests/pictures"
-##################################################
-### Duc QOL fun times.
-alias duci="duc index -pbv " 
-##################################################
-### TIMEWARRIOR
-alias timeweek="timew summary :week :ids"
-alias timemonth="timew summary :month :ids"
-alias timeyear="timew summary :year :ids"
-##################################################
-### GIST ACTIONS
-alias newgist="gist -sco -d "
-alias giste="gist -e "
-alias gistu="gist -u "
-alias gistls="gist -l "
-alias gistout="gist -R "
-alias gistdel="gist --delete"
-##################################################
-### UPDATE PIP / GEMS / ETC
-alias pipsup="pip install --upgrade pip wheel setuptools"
-alias pipup="pipx update-all"
-alias gemup="gem update --system && gem update"
-##################################################
-### Website / Youtube /  HTTP kung-fu. Mirror and download etc.
-# mirror a single webpage
-alias mirror="wget --adjust-extension --span-hosts --convert-links --backup-converted --page-requisites"
-#
-# youtube-dl for best video, shorthand
-alias yt="youtube-dl"
-#
-#download best audio file and convert to mp3
-alias ytm="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "
-#
-#youtube search all formats
-alias ytf="youtube-dl -F"
-##################################################
-### I'M LAZY AND MAKE NO EXCUSES
-alias pkgs="pkg show"
-alias pkgi="pkg install"
-alias pkgu="pkg upgrade"
+source $ZDOTDIR/.aliases
