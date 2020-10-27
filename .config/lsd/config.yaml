@@ -30,3 +30,5 @@ sorting:
   dir-grouping: first
 
 total-size: true
+
+no-symlink:false
