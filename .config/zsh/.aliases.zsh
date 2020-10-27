@@ -25,9 +25,38 @@ alias -s {txt,md,mdown,markdown,yml,yaml,conf,zsh}=micro
 alias -s {html,htm,org,com,net,io}=w3m
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### LS DAILY DRIVER -- GIT BUILT IN!;;;;;;;;;;;;;;
-# https://the.exa.website/ 
-alias l.="exa -alh --git --classify -s=name --group-directories-first"
-alias lt="exa -a --tree --level=4 --long --git"
+# https://the.exa.website/ ;;;;;;;;;;;;;;;;;;;;;;;
+alias l.="exa -alh --git -F -s=name --time-style=long-iso --group-directories-first"
+alias lt="exa -a --tree --level=4 --long --time-style=long-iso --git"
+# https://github.com/athityakumar/colorls ;;;;;;;
+alias cl.="colorls -Al --gs --sd"
+alias clt="colorls -Al --gs --sd --tree=4"
+# experimenvtal
+lp() {
+	case ${1} in
+	e)
+	  exa -alh --git -F -s=name --time-style=long-iso --group-directories-first ${2}
+	;;
+	et)
+	  exa -a --tree --level=4 --long --time-style=long-iso --git ${2}
+	;;
+	c)
+	  colorls -Al --gs --sd ${2}
+	;;
+	ct)
+	  colorls -Al --gs --sd --tree=4 ${2}
+	;;
+	l)
+	  lsd -lAF --blocks=permission,size,date,name --date=relative ---total-size --group-dirs first ${2}
+	;;
+	lt)
+	  lsd -lAF --blocks=permission,size,date,name --date=relative --group-dirs first --tree --depth 3 -I .git -I .cache -I cache -I .bundle -I _cacache 
+	;;
+	*)
+	  exa -alh -F ${2}
+	;;
+	esac
+}
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### BETTER, LITTLE MORE SANE UTILS;;;;;;;;;;;;;;;;
 alias cat="bat "

@@ -103,4 +103,4 @@ eval "$(register-python-argcomplete pipx)"
 ##################################################
 ## ZSH ALIASES. BC WHY REMEMBER EVERY OPTION?   ##
 ##################################################
-source $ZDOTDIR/.aliases
+source $ZDOTDIR/.aliases.zsh
