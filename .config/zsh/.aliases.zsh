@@ -3,6 +3,7 @@
 ## created:2020-10-26   |   modified:2020-10-26 ##
 ##----------------------------------------------##
 ##        https://github.com/alephalpha0        ##
+##            http://rootofpi.me                ##
 ####################           ###################
 #############                        #############
 ## Many thanks to those who have shared and     ##
@@ -25,25 +26,18 @@ alias -s {txt,md,mdown,markdown,yml,yaml,conf,zsh}=micro
 alias -s {html,htm,org,com,net,io}=w3m
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### LS DAILY DRIVER -- GIT BUILT IN!;;;;;;;;;;;;;;
-# https://the.exa.website/ ;;;;;;;;;;;;;;;;;;;;;;;
-alias l.="exa -alh --git -F -s=name --time-style=long-iso --group-directories-first"
-alias lt="exa -a --tree --level=4 --long --time-style=long-iso --git"
-# https://github.com/athityakumar/colorls ;;;;;;;
-alias cl.="colorls -Al --gs --sd"
-alias clt="colorls -Al --gs --sd --tree=4"
-# experimenvtal
-lp() {
+l.() {
 	case ${1} in
-	e)
+	e) # https://the.exa.website/
 	  exa -alh --git -F -s=name --time-style=long-iso --group-directories-first ${2}
 	;;
-	et)
+	et) # https://the.exa.website/
 	  exa -a --tree --level=4 --long --time-style=long-iso --git ${2}
 	;;
-	c)
+	c) # https://github.com/athityakumar/colorls
 	  colorls -Al --gs --sd ${2}
 	;;
-	ct)
+	ct) # https://github.com/athityakumar/colorls
 	  colorls -Al --gs --sd --tree=4 ${2}
 	;;
 	l)
@@ -53,7 +47,7 @@ lp() {
 	  lsd -lAF --blocks=permission,size,date,name --date=relative --group-dirs first --tree --depth 3 -I .git -I .cache -I cache -I .bundle -I _cacache 
 	;;
 	*)
-	  exa -alh -F ${2}
+	  exa -alh --git -F -s=name --time-style=long-iso --group-directories-first ${2}
 	;;
 	esac
 }

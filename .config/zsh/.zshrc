@@ -4,6 +4,7 @@
 ##----------------------------------------------##
 ##   TERMUX 0.99 RUNNING ON ANDROID 10@A205U    ##
 ##        https://github.com/alephalpha0        ##
+##            http://rootofpi.me                ##
 ####################           ###################
 #############                        #############
 ## Many thanks to those who have shared and     ##
