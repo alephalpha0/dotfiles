@@ -1,6 +1,6 @@
 ##################################################
 ## alephalpha0  |  ZSH Environmental Variables  ##
-## created:2020-09-11   |  modified:2020-10-22  ##
+## created:2020-09-11   |  modified:2020-11-03  ##
 ##----------------------------------------------##
 ##   TERMUX 0.99 RUNNING ON ANDROID 10@A205U    ##
 ##        https://github.com/alephalpha0        ##
@@ -36,10 +36,11 @@ export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 ### ZSH ANTIBODY HOME REBASE
 ### Did not like antibody's default HOME dir. WHO'S HOUSE?
-export ANTIBODY_HOME=$ZDOTDIR/antibody
-### HUB / GITHUB VARIABLES
-### Not sure this is relevant anymore. Using SSH and SSH-Agent.
-export GITHUB_USER="alephalpha0"
+export ANTIBODY_HOME="$ZDOTDIR/antibody"
+### PIPX's default bin location was messing with my OCD.
+export PIPX_BIN_DIR=~/bin
+### Starship Prompt's cache directory made me unhappy.
+export STARSHIP_CACHE=$XDG_CACHE_HOME/starship
 ### Did somebody call for some kind of text editor?
 ### Helps other programs go into editing mode in my pref editor.
 export EDITOR="micro"
@@ -60,7 +61,9 @@ export TZ="America/Chicago"
 ### The use of variables other than $PATH (eg. ~, $PREFIX) 
 ### is not always guaranteed to resolve properly. Go ahead
 ### and type out the full path to your directories.
-export PATH="$PATH:/data/data/com.termux/files/home/bin:/data/data/com.termux/files/home/.local/bin:/data/data/com.termux/files/usr/lib/ruby/gems/2.7.0:/data/data/com.termux/files/usr/bin/ruby"
+export PATH="/data/data/com.termux/files/home/bin:/data/data/com.termux/files/home/.local/bin:/data/data/com.termux/files/usr/lib/ruby/gems/2.7.0:/data/data/com.termux/files/usr/bin/ruby:$PATH"
 ### BAT OPTIONS
 ### https://github.com/sharkdp/bat
-export BAT_THEME="DarkNeon"
+export BAT_THEME="Nord"
+### MICRO OPTIONS
+export MICRO_TRUECOLOR=1
