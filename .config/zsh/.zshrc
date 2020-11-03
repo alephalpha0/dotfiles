@@ -106,4 +106,6 @@ eval "$(register-python-argcomplete pipx)"
 ##################################################
 source "${ZDOTDIR}"/.aliases.zsh
 
+
 source <("/data/data/com.termux/files/usr/bin/starship" init zsh --print-full-init)
+

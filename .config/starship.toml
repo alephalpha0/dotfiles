@@ -1,0 +1,125 @@
+format = """
+🚀\
+$hostname\
+$directory\
+$nodejs\
+$python\
+$ruby\
+$cmd_duration\
+$status\
+$line_break\
+
+$time\
+$git_branch\
+$git_commit\
+$git_status\
+$character
+"""
+[character]
+format = "|> "
+success_symbol = "[|>](bold cyan) "
+error_symbol ="[!=](bold red) "
+
+[cmd_duration]
+min_time = 5_000
+
+[directory]
+fish_style_pwd_dir_length = 2
+truncation_length= 2
+truncate_to_repo = false
+
+[git_commit]
+only_detached = false
+
+[git_status]
+modified = "[!\\(($count)\\)](bold fg:20)"
+untracked = "[?\\(($count)\\)](cyan)"
+staged = "[+\\(($count)\\)](yellow)"
+
+[python]
+python_binary = "python3"
+
+[status]
+disabled = false
+
+[time]
+disabled = false
+format = '[\[ $time \]]($style) '
+
+
+[aws]
+disabled = true
+[battery]
+disabled = true
+[cmake]
+disabled = true
+[conda]
+disabled = true
+[crystal]
+disabled = true
+[dart]
+disabled = true
+[docker_context]
+disabled = true
+[dotnet]
+disabled = true
+[elixer]
+disabled = true
+[elm]
+disabled = true
+[env_var]
+disabled = true
+[erland]
+disabled = true
+[gcloud]
+disabled = true
+[git_state]
+disabled = true
+[golang]
+disabled = true
+[helm]
+disabled = true
+[java]
+disabled = true
+[julia]
+disabled = true
+[kubernetes]
+disabled = true
+[lua]
+disabled = true
+[memory_usage]
+disabled = true
+[hg_branch]
+disabled = true
+[nim]
+disabled = true
+[nix_shell]
+disabled = true
+[package]
+disabled = true
+[ocaml]
+disabled = true
+[openstack]
+disabled = true
+[perl]
+disabled = true
+[php]
+disabled = true
+[rust]
+disabled = true
+[shlvl]
+disabled = true
+[singularity]
+disabled = true
+[swift]
+disabled = true
+[terraform]
+disabled = true
+[username]
+disabled = true
+[zig]
+disabled = true
+[custom]
+disabled = true
+[purescript]
+disabled = true
