@@ -1,6 +1,6 @@
 ##################################################
 ## alephalpha0 | ZSH RC File. Magic Happening.  ##
-## created:2020-08-04   |   modified:2020-10-26 ##
+## created:2020-08-04   |   modified:2020-11-03 ##
 ##----------------------------------------------##
 ##   TERMUX 0.99 RUNNING ON ANDROID 10@A205U    ##
 ##        https://github.com/alephalpha0        ##
@@ -90,7 +90,7 @@ zstyle ':completion:*' squeeze-slashes true
 ##################################################
 ### DYNAMIC LOADING FOR NOW, PROBABLY CHANGING
 source <(antibody init)
-antibody bundle < $ZDOTDIR/.zsh-plugins.txt
+antibody bundle < "${ZDOTDIR}"/.zsh-plugins.txt
 ##################################################
 ###    Reloading compinit to enable zstyles    ###
 autoload -Uz compinit;compinit -i
@@ -104,4 +104,6 @@ eval "$(register-python-argcomplete pipx)"
 ##################################################
 ## ZSH ALIASES. BC WHY REMEMBER EVERY OPTION?   ##
 ##################################################
-source $ZDOTDIR/.aliases.zsh
+source "${ZDOTDIR}"/.aliases.zsh
+
+source <("/data/data/com.termux/files/usr/bin/starship" init zsh --print-full-init)

@@ -1,10 +1,10 @@
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 
-brokendisk/dune-quotes
+#brokendisk/dune-quotes
 svenXY/timewarrior
 
-nojhan/liquidprompt
+#nojhan/liquidprompt
 
 ohmyzsh/ohmyzsh path:lib
 #ohmyzsh/ohmyzsh path:themes/ys.zsh-theme

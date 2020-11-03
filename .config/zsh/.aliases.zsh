@@ -35,10 +35,10 @@ l.() {
 	  exa -a --tree --level=4 --long --time-style=long-iso --git ${2}
 	;;
 	c) # https://github.com/athityakumar/colorls
-	  colorls -Al --gs --sd ${2}
+	  colorls -Al --gs --sd --dark ${2}
 	;;
 	ct) # https://github.com/athityakumar/colorls
-	  colorls -Al --gs --sd --tree=4 ${2}
+	  colorls -Al --gs --sd --dark --tree=4 ${2}
 	;;
 	l)
 	  lsd -lAF --blocks=permission,size,date,name --date=relative ---total-size --group-dirs first ${2}
@@ -53,8 +53,9 @@ l.() {
 }
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### BETTER, LITTLE MORE SANE UTILS;;;;;;;;;;;;;;;;
-alias cat="bat "
-alias ls="exa"
+alias cat="bat --color=always --italic-text=always --style=full"
+alias ls="lsd -lAF --blocks=permission,size,date,name --date=date --total-size --group-dirs first"
+alias grep="rg --hidden --follow"
 alias cpy="rsync -avz --checksum --progress -h"
 alias mov="rsync -avz --checksum --progress -h --remove-source-files"
 alias sync="rsync -avzu --checksum --progress -h"
@@ -76,7 +77,7 @@ alias motd="$EDITOR $PREFIX/etc/motd"
 #--- DIRECTORIES;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 alias proj="cd ~/projects"
 alias conf="cd ~/.config"
-alias rootofpi="cd ~/rootofpi.me"
+alias rop="cd ~/rootofpi.me"
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### DUC QOL FUN TIMES;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 alias ducindex="duc index -pbv " 

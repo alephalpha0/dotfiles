@@ -1,11 +1,12 @@
 default_hour: 9
-default_minute: 0
+default_minute: 09
 editor: micro
 encrypt: false
 highlight: true
 indent_character: '|'
 journals:
   default: /data/data/com.termux/files/home/.config/local/share/jrnl/journal.txt
+  code: /data/data/com.termux/files/home/.config/local/share/jrnl/coding.txt
 linewrap: 79
 tagsymbols: '@'
 template: false
