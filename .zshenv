@@ -28,19 +28,19 @@
 ### setting up my XDG compliance yo!
 ## At least I've got thay going for me, so that's good.
 ### https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
-export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_DATA_HOME="$XDG_CONFIG_HOME"/local/share
+export XDG_CACHE_HOME="$XDG_CONFIG_HOME"/cache
 ### ZSH QOL here. Makes dealing with Antibody/ZSH specific things
 ### easier and more unified. 
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 ### ZSH ANTIBODY HOME REBASE
 ### Did not like antibody's default HOME dir. WHO'S HOUSE?
-export ANTIBODY_HOME="$ZDOTDIR/antibody"
+export ANTIBODY_HOME="$ZDOTDIR"/antibody
 ### PIPX's default bin location was messing with my OCD.
 export PIPX_BIN_DIR=~/bin
 ### Starship Prompt's cache directory made me unhappy.
-export STARSHIP_CACHE=$XDG_CACHE_HOME/starship
+export STARSHIP_CACHE="$XDG_CACHE_HOME"/starship
 ### Did somebody call for some kind of text editor?
 ### Helps other programs go into editing mode in my pref editor.
 export EDITOR="micro"
@@ -48,7 +48,7 @@ export VISUAL="micro"
 export PAGER="less"
 export BROWSER="w3m"
 ### ZSH can remember? LET IT BE!
-export HISTFILE="$ZDOTDIR/.zhistory"
+export HISTFILE="$ZDOTDIR"/.zhistory
 export HISTTIMEFORMAT="[%F %T]"
 export HISTSIZE=10000
 export SAVEHIST=10000
@@ -64,6 +64,6 @@ export TZ="America/Chicago"
 export PATH="/data/data/com.termux/files/home/bin:/data/data/com.termux/files/home/.local/bin:/data/data/com.termux/files/usr/lib/ruby/gems/2.7.0:/data/data/com.termux/files/usr/bin/ruby:$PATH"
 ### BAT OPTIONS
 ### https://github.com/sharkdp/bat
-export BAT_THEME="Nord"
+export BAT_THEME="Monokai Extended Light"
 ### MICRO OPTIONS
 export MICRO_TRUECOLOR=1
