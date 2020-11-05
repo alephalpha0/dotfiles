@@ -66,8 +66,6 @@ sshup() {
 	eval $(ssh-agent -s)
 	ssh-add ~/.ssh/${1}
 }
-#alias ssheval="eval $(ssh-agent -s)"
-#alias sshadd="ssh-add ~/.ssh/id_ecdsa_rootofpime"
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### FREQ EDITED FILES / DIRECTORIES;;;;;;;;;;;;;;;
 #--- FILES;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -107,17 +105,17 @@ alias npmup="npm up --global"
 # mirror a single webpage;;;;;;;;;;;;;;;;;;;;;;;;;
 alias mirror="wget --adjust-extension --span-hosts --convert-links --backup-converted --page-requisites"
 # youtube-dl for best video, shorthand;;;;;;;;;;;;
-alias yt="youtube-dl"
+alias yt="youtube-dlc"
 #download best audio file and convert to mp3;;;;;;
-alias ytm="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "
+alias ytm="youtube-dlc -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "
 #youtube search all formats;;;;;;;;;;;;;;;;;;;;;;;
-alias ytf="youtube-dl -F"
+alias ytf="youtube-dlc -F"
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### IMG MANIPULATION;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 alias ascii="jp2a --term-zoom --background=light --colors "
 asciihtml() {
   # parameters $1 = input file, $2 = output html file
-  jp2a --term-zoom --background=light --colors --html ${1} > ${2}
+  jp2a -z --background=dark --colors --color-depth=24 --html --html-fontsize=2 --output=${2} ${1}
 }
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### I'M LAZY AND MAKE NO EXCUSES;;;;;;;;;;;;;;;;;;
