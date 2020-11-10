@@ -124,3 +124,7 @@ alias pkgi="pkg install"
 alias pkgu="pkg upgrade"
 #--- for use na term in micro;;;;;;;;;;;;;;;;;;;;;
 alias batdir="l. | bat"
+#Serving up that file, or directory, or entire file system
+# With the quickness, please.
+#
+alias mserv="miniserve -urzqv -i ::"

@@ -109,3 +109,7 @@ source "${ZDOTDIR}"/.aliases.zsh
 
 source <("/data/data/com.termux/files/usr/bin/starship" init zsh --print-full-init)
 
+mp256() {
+	file="${1}"
+	ffmpeg -i ${1} -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy -movflags +faststart converted/${1}
+}
