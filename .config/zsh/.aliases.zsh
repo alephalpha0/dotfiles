@@ -1,6 +1,6 @@
 ##################################################
 ## alephalpha0 | ZSH aliases. How many options? ##
-## created:2020-10-26   |   modified:2020-10-26 ##
+## created:2020-10-26   |   modified:2020-11-12 ##
 ##----------------------------------------------##
 ##        https://github.com/alephalpha0        ##
 ##            http://rootofpi.me                ##
@@ -44,7 +44,7 @@ l.() {
 	  lsd -lAF --blocks=permission,size,date,name --date=relative ---total-size --group-dirs first ${2}
 	;;
 	lt)
-	  lsd -lAF --blocks=permission,size,date,name --date=relative --group-dirs first --tree --depth 3 -I .git -I .cache -I cache -I .bundle -I _cacache 
+	  lsd -lAF --blocks=permission,size,date,name --date=relative --group-dirs first --tree --depth 3 -I .git -I .cache -I cache -I .bundle -I _cacache ${2}
 	;;
 	*)
 	  exa -alh --git -F -s=name --time-style=long-iso --group-directories-first ${2}
@@ -60,6 +60,9 @@ alias cpy="rsync -avz --checksum --progress -h"
 alias mov="rsync -avz --checksum --progress -h --remove-source-files"
 alias sync="rsync -avzu --checksum --progress -h"
 alias rmv="rm -fd -R -I"
+#;;;;;;;;;;;;;;;;BETTER DEFAULTS;;;;;;;;;;;;;;;;;;
+alias lsd="lsd -lAF --blocks=permission,size,date,name --date=date --total-size --group-dirs first"
+
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### SSH QOL QUICK UP AND ADD;;;;;;;;;;;;;;;;;;;;;;
 sshup() {
@@ -72,8 +75,10 @@ sshup() {
 alias myrc="$EDITOR $ZDOTDIR/.zshrc"
 alias myenv="$EDITOR ~/.zshenv"
 alias motd="$EDITOR $PREFIX/etc/motd"
+alias myalias="$EDITOR ~/projects/dotfiles/.config/zsh/.aliases.zsh"
 #--- DIRECTORIES;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 alias proj="cd ~/projects"
+alias dot="cd ~/projects/dotfiles"
 alias conf="cd ~/.config"
 alias rop="cd ~/rootofpi.me"
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -104,27 +109,54 @@ alias npmup="npm up --global"
 ### Website / Youtube kung-fu. Mirror and download etc.
 # mirror a single webpage;;;;;;;;;;;;;;;;;;;;;;;;;
 alias mirror="wget --adjust-extension --span-hosts --convert-links --backup-converted --page-requisites"
-# youtube-dl for best video, shorthand;;;;;;;;;;;;
+# use w3m to dump page source into file, overriding
+# default encoding option from gzip to uncompressed
+w3dump(){
+	w3m -dump_source -o accept_encoding="identity;q=0" $1 >>"${2}"
+}
+percep() {
+	percollate epub -o $2 $1
+}
+percml() {
+	percollate html -o $2 $1
+}
+# youtube-dlc for best video, shorthand;;;;;;;;;;;;
 alias yt="youtube-dlc"
 #download best audio file and convert to mp3;;;;;;
 alias ytm="youtube-dlc -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "
-#youtube search all formats;;;;;;;;;;;;;;;;;;;;;;;
+# youtube search all formats;;;;;;;;;;;;;;;;;;;;;;;
 alias ytf="youtube-dlc -F"
-#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-### IMG MANIPULATION;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+### IMG MANIPULATION;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 alias ascii="jp2a --term-zoom --background=light --colors "
 asciihtml() {
   # parameters $1 = input file, $2 = output html file
   jp2a -z --background=dark --colors --color-depth=24 --html --html-fontsize=2 --output=${2} ${1}
 }
-#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-### I'M LAZY AND MAKE NO EXCUSES;;;;;;;;;;;;;;;;;;
+#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+### I'M LAZY AND MAKE NO EXCUSES;;;;;;;;;;;;;;;;;;!
 alias pkgs="pkg show"
+alias pkgse="pkg search"
 alias pkgi="pkg install"
 alias pkgu="pkg upgrade"
-#--- for use na term in micro;;;;;;;;;;;;;;;;;;;;;
+#--- for use na term in micro;;;;;;;;;;;;;;;;;;;;;;
 alias batdir="l. | bat"
-#Serving up that file, or directory, or entire file system
-# With the quickness, please.
-#
+#¡;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+# Serving up that file, or directory, or entire ;;;
+# file system with the quickness, please. ;;;;;;;;;
 alias mserv="miniserve -urzqv -i ::"
+#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+###  WEBSITE GENERATION / UPKEEP / DEPLOYMENT  ;;;;
+# jekyll actions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+newblog() {
+	cd ~/rootofpi.me/v2
+	bundler exec jekyll post "${1}"
+}
+alias buildblog="bundler exec jekyll build --strict_front_matter"
+# neocities funtimes ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+alias neopush="neocities push ."
+alias neodel="neocities delete"
+alias neols="neocities list -a -d /"
+# surge tools ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+alias surgels="surge list"
+alias surgedel="surge teardown"
