@@ -22,7 +22,7 @@ pager: less -FRX
 #
 # Whenever cheatsheets share the same title (like 'tar'), the most local
 # cheatsheets (those which come later in this file) take precedent over the
-# less local sheets. This allows you to create your own "overides" for
+# less local sheets. This allows you to create your own "overrides" for
 # "upstream" cheatsheets.
 #
 # But what if you want to view the "upstream" cheatsheets instead of your own?

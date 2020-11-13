@@ -7,7 +7,7 @@ LP_PS1_FILE=~/.config/zsh/liquidprompt.aa0.ps1
 
 ### GEN BEHAVIOR
 
-# battery % is displayed if under this threshhold
+# battery % is displayed if under this threshold
  LP_BATTERY_THRESHOLD=60
 # CPU load avg over past minute.
  LP_LOAD_THRESHOLD=100
@@ -31,7 +31,7 @@ LP_PS1_FILE=~/.config/zsh/liquidprompt.aa0.ps1
 
 ### ENABLE / DISABLE PROMPT SUBSECTIONS
 
-#show red : when you dont have +w
+#show red : when you don't have +w
  LP_ENABLE_PERM=1
  LP_ENABLE_PROXY=1
  LP_ENABLE_JOBS=1

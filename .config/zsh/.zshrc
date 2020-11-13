@@ -22,7 +22,7 @@
 ##!!!!!!!!!!!ANY POSSIBLE USE EITHER!!!!!!!!!!!!##
 ##################################################
 ##################################################
-##           ZSH COMPLETION AQUISITION          ##
+##           ZSH COMPLETION ACQUISITION          ##
 ##################################################
 autoload -Uz compinit;
 ## check if comp cache was updated today.

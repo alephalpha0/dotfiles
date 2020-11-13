@@ -60,6 +60,8 @@ alias cpy="rsync -avz --checksum --progress -h"
 alias mov="rsync -avz --checksum --progress -h --remove-source-files"
 alias sync="rsync -avzu --checksum --progress -h"
 alias rmv="rm -fd -R -I"
+alias spelling="codespell --builtin clear,rare,code,informal --summary -i 3 -q 2 -H -C 1 -w"
+
 #;;;;;;;;;;;;;;;;BETTER DEFAULTS;;;;;;;;;;;;;;;;;;
 alias lsd="lsd -lAF --blocks=permission,size,date,name --date=date --total-size --group-dirs first"
 
@@ -102,7 +104,7 @@ alias gistdel="gist --delete"  # delete gist ID | URL
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### UPDATE PIP / GEMS / NPM;;;;;;;;;;;;;;;;;;;;;;;
 alias pipsup="pip install --upgrade pip wheel setuptools"
-alias pipup="pipx update-all"
+alias pipup="pipx upgrade-all"
 alias gemup="gem update --system && gem update"
 alias npmup="npm up --global"
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -160,3 +162,4 @@ alias neols="neocities list -a -d /"
 # surge tools ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 alias surgels="surge list"
 alias surgedel="surge teardown"
+
