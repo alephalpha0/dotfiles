@@ -91,6 +91,8 @@ zstyle ':completion:*' squeeze-slashes true
 ### DYNAMIC LOADING FOR NOW, PROBABLY CHANGING
 source <(antibody init)
 antibody bundle < "${ZDOTDIR}"/.zsh-plugins.txt
+
+source <(npm completion)
 ##################################################
 ###    Reloading compinit to enable zstyles    ###
 autoload -Uz compinit;compinit -i
