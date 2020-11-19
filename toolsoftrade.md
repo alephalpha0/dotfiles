@@ -1,5 +1,9 @@
 # The never ending and continually expanding CLI, TUI, and shiny toys I use. 
 
+### `pip` 
++ `pipx` 
++ `mutagen` 
+ 
 ### `pipx` 
 + `ansi2html` 
 + `buku` 
@@ -12,11 +16,11 @@
 + `youtube-dlc` 
 
 ### `npm` 
-+ 'optimizt` 
++ `optimizt` 
 + `percollate` 
 + `surge` 
 + `svg-term` 
-+ `tiddlywiki` '
++ `tiddlywiki` 
 
 ### `gem` 
 + `colorls` 
@@ -66,3 +70,10 @@
 + `weechat` 
 + `wget` 
 + `zsh` 
+
+ ### Downloaded binaries 
+ + `cheat` 
+ + `glow` 
+ + `googler` 
+ + `miniserve` 
+ + `shellcheck` 
