@@ -26,7 +26,7 @@
 ############## LIKE A FUCKING BOSS ###############
 ####
 ### setting up my XDG compliance yo!
-## At least I've got thay going for me, so that's good.
+## At least I've got that going for me, so that's good.
 ### https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_DATA_HOME="$XDG_CONFIG_HOME"/local/share
