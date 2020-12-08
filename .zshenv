@@ -71,3 +71,8 @@ export PATH="/data/data/com.termux/files/home/bin:/data/data/com.termux/files/ho
 export BAT_THEME="Monokai Extended Light"
 ### MICRO OPTIONS
 export MICRO_TRUECOLOR=1
+
+### WARBOXING / CAPTURE THE FLAG
+# overthewire.org
+export WECHALLUSER="alephalpha0"
+export WECHALLTOKEN="124E1-C61B2-46DFE-71B10-314AF-4E1A6"
