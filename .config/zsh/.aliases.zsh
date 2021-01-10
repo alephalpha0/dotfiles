@@ -123,11 +123,11 @@ percml() {
 	percollate html -o $2 $1
 }
 # youtube-dlc for best video, shorthand;;;;;;;;;;;;
-alias yt="youtube-dlc"
+alias yt="youtube-dl"
 #download best audio file and convert to mp3;;;;;;
-alias ytm="youtube-dlc -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "
+alias ytm="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "
 # youtube search all formats;;;;;;;;;;;;;;;;;;;;;;;
-alias ytf="youtube-dlc -F"
+alias ytf="youtube-dl -F"
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### IMG MANIPULATION;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 alias ascii="jp2a --term-zoom --background=light --colors "
