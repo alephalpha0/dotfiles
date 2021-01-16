@@ -33,7 +33,7 @@ export XDG_DATA_HOME="$XDG_CONFIG_HOME"/local/share
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME"/cache
 ### Further terminal/linux compliance. 
 export TMPDIR="$HOME"/tmp
-export HOMEDIR="$HOME"
+export HOMEDIR=/data/data/com.termux/files/home
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 ### ZSH QOL here. Makes dealing with Antibody/ZSH specific things
 ### easier and more unified. 
@@ -42,7 +42,7 @@ export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 ### Did not like antibody's default HOME dir. WHO'S HOUSE?
 export ANTIBODY_HOME="$ZDOTDIR"/antibody
 ### PIPX's default bin location was messing with my OCD.
-export PIPX_BIN_DIR=~/bin
+export PIPX_BIN_DIR="$HOME"/bin
 ### Starship Prompt's cache directory made me unhappy.
 export STARSHIP_CACHE="$XDG_CACHE_HOME"/starship
 ### Did somebody call for some kind of text editor?
@@ -71,6 +71,9 @@ export PATH="/data/data/com.termux/files/home/bin:/data/data/com.termux/files/ho
 export BAT_THEME="Monokai Extended Light"
 ### MICRO OPTIONS
 export MICRO_TRUECOLOR=1
+###PasswordStore options
+export PASSWORD_STORE_GENERATED_LENGTH=20
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 
 ### WARBOXING / CAPTURE THE FLAG
 # overthewire.org

@@ -31,4 +31,4 @@ sorting:
 
 total-size: true
 
-no-symlink:false
+no-symlink: false
