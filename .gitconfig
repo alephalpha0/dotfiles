@@ -1,11 +1,18 @@
 [user]
-	email = alephalpha0@rootofpi.me
+	email = alephalpha0@tutanota.com
 	name = alephalpha0
+[init]
+	defaultBranch = master
+[core]
+	editor = micro
+	gitproxy = ssh
+[color]
+	ui = true
+	advice = true
+	interactive = true
+	push = true
+	status = true
 [pull]
 	rebase = true
 [hub]
 	protocol = ssh
-[core]
-	editor = micro
-[color]
-	ui = true

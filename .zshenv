@@ -65,10 +65,10 @@ export TZ="America/Chicago"
 ### The use of variables other than $PATH (eg. ~, $PREFIX) 
 ### is not always guaranteed to resolve properly. Go ahead
 ### and type out the full path to your directories.
-export PATH="/data/data/com.termux/files/home/bin:/data/data/com.termux/files/home/.local/bin:/data/data/com.termux/files/usr/lib/ruby/gems/2.7.0:/data/data/com.termux/files/usr/bin/ruby:$PATH"
+export PATH="/data/data/com.termux/files/home/bin:/data/data/com.termux/files/home/.local/bin:/data/data/com.termux/files/usr/lib/ruby/gems/2.7.0:/data/data/com.termux/files/usr/bin/ruby:/data/data/com.termux/files/home/.cargo/bin:$PATH"
 ### BAT OPTIONS
 ### https://github.com/sharkdp/bat
-export BAT_THEME="Monokai Extended Light"
+export BAT_THEME="gruvbox"
 ### MICRO OPTIONS
 export MICRO_TRUECOLOR=1
 ###PasswordStore options
