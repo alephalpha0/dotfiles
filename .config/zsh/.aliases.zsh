@@ -87,41 +87,12 @@ alias rop="cd ~/rootofpi.me"
 ### DUC QOL FUN TIMES;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 alias ducindex="duc index -pbv " 
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-### TIMEWARRIOR;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-alias timeweek="timew summary :week :ids"
-alias timemonth="timew summary :month :ids"
-alias timeyear="timew summary :year :ids"
-timemod() {
-    # args are $1=start/end $2=id $3=modification
-	timew modify ${1} @${2} ${3}
-}
-#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-### GIST ACTIONS;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-alias newgist="gist -sco -d "  # shorten, copy, open, desc
-alias gistu="gist -u "         # update
-alias gistls="gist -l "        # list gists
-alias gistdel="gist --delete"  # delete gist ID | URL
-#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### UPDATE PIP / GEMS / NPM;;;;;;;;;;;;;;;;;;;;;;;
 alias pipsup="pip install --upgrade pip wheel setuptools"
 alias pipup="pipx upgrade-all"
 alias gemup="gem update --system && gem update"
 alias npmup="npm up --global"
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-### Website / Youtube kung-fu. Mirror and download etc.
-# mirror a single webpage;;;;;;;;;;;;;;;;;;;;;;;;;
-alias mirror="wget --adjust-extension --span-hosts --convert-links --backup-converted --page-requisites"
-# use w3m to dump page source into file, overriding
-# default encoding option from gzip to uncompressed
-w3dump(){
-	w3m -dump_source -o accept_encoding="identity;q=0" $1 >>"${2}"
-}
-percep() {
-	percollate epub -o $2 $1
-}
-percml() {
-	percollate html -o $2 $1
-}
 # youtube-dlc for best video, shorthand;;;;;;;;;;;;
 alias yt="youtube-dl"
 #download best audio file and convert to mp3;;;;;;
@@ -137,6 +108,10 @@ asciihtml() {
 }
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ### I'M LAZY AND MAKE NO EXCUSES;;;;;;;;;;;;;;;;;;!
+vol() {
+	termux-volume music $1
+}
+
 alias pkgs="pkg show"
 alias pkgse="pkg search"
 alias pkgi="pkg install"
@@ -149,12 +124,17 @@ alias batdir="l. | bat"
 alias mserv="miniserve -urzqv -i ::"
 #;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ###  WEBSITE GENERATION / UPKEEP / DEPLOYMENT  ;;;;
-# jekyll actions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-newblog() {
-	cd ~/rootofpi.me/v2
-	bundler exec jekyll post "${1}"
+# pelican build site ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+buildblog() {
+	if [[ -d ~/rootofpi.me/neov2 ]]; then
+	  cd ~/rootofpi.me/neov2
+	  pelican
+	  if [[ -d ~/rootofpi.me/neov2/output ]]; then
+	    cd ~/rootofpi.me/neov2/output
+	    neocities push
+	  fi
+	fi
 }
-alias buildblog="bundler exec jekyll build --strict_front_matter"
 # neocities funtimes ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 alias neopush="neocities push ."
 alias neodel="neocities delete"

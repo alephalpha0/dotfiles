@@ -43,6 +43,8 @@ export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 export ANTIBODY_HOME="$ZDOTDIR"/antibody
 ### PIPX's default bin location was messing with my OCD.
 export PIPX_BIN_DIR="$HOME"/bin
+### Make's PIP stop polluting my HDD with its damn cache.
+export PIP_NO_CACHE_DIR=true
 ### Starship Prompt's cache directory made me unhappy.
 export STARSHIP_CACHE="$XDG_CACHE_HOME"/starship
 ### Did somebody call for some kind of text editor?
