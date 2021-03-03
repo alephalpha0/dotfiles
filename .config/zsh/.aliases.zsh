@@ -126,10 +126,10 @@ alias mserv="miniserve -urzqv -i ::"
 ###  WEBSITE GENERATION / UPKEEP / DEPLOYMENT  ;;;;
 # pelican build site ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 buildblog() {
-	if [[ -d ~/rootofpi.me/neov2 ]]; then
+	if [[ -d !~/rootofpi.me/neov2 ]]; then
 	  cd ~/rootofpi.me/neov2
 	  pelican
-	  if [[ -d ~/rootofpi.me/neov2/output ]]; then
+	  if [[ -d !~/rootofpi.me/neov2/output ]]; then
 	    cd ~/rootofpi.me/neov2/output
 	    neocities push
 	  fi
