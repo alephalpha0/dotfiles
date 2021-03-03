@@ -124,3 +124,5 @@ msgotd() {
 uptime
 }
 msgotd
+
+source /data/data/com.termux/files/home/.config/broot/launcher/bash/br
