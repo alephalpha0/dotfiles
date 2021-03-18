@@ -2,7 +2,7 @@ zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 
 #brokendisk/dune-quotes
-svenXY/timewarrior
+#svenXY/timewarrior
 
 #nojhan/liquidprompt
 

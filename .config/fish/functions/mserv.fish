@@ -1,3 +1,4 @@
+# Defined in /data/data/com.termux/files/usr/tmp/fish.JQwg6q/mserv.fish @ line 2
 function mserv
-  command miniserve -urqv -i ::
+  miniserve -urqv -i ::
 end
