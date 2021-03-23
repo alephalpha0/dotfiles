@@ -34,7 +34,7 @@ export XDG_CACHE_HOME="$XDG_CONFIG_HOME"/cache
 ### Further terminal/linux compliance. 
 export TMPDIR="$HOME"/tmp
 export HOMEDIR=/data/data/com.termux/files/home
-export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
+
 ### ZSH QOL here. Makes dealing with Antibody/ZSH specific things
 ### easier and more unified. 
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
