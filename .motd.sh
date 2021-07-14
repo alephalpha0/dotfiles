@@ -9,11 +9,3 @@ $(tput sgr0)- IP Addresses.......: `hostname | /usr/bin/cut -d " " -f 1` and `wg
 
 $(tput sgr0)"
 neofetch
-
-if ps -p $SSH_AGENT_PID > /dev/null
-then
-   echo "ssh-agent is already running"
-else
-eval `ssh-agent -s`
-ssh-add ~/.ssh/id_ed25519_envs && ssh-add ~/.ssh/id_ecdsa_rootofpime
-fi
